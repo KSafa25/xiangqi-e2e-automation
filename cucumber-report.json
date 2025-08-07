@@ -1,0 +1,197 @@
+[
+  {
+    "description": "  As a user\n  I want to sign in to my account\n  So that I can access my profile and game history",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-sign-in;successful-sign-in-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Successful sign in with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1472698374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the sign in page",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5062948166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I enter my email and password",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47151875
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click the sign in button",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71309209
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should be logged in and redirected to the lobby",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1878392333
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 83968291
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-sign-in;unsuccessful-sign-in-with-invalid-credentials,-then-successful-retry",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Unsuccessful sign in with invalid credentials, then successful retry",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 704088084
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I am on the sign in page",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5205794082
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I enter my email and an incorrect password",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35415790
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I click the sign in button",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53741167
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see an error message with title 'Error' and content 'Invalid password'",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 880079667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I retry with correct password if invalid password toast appears",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67450042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I should be logged in and redirected to the lobby",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1864553208
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 158620917
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-sign-in",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "User Sign In",
+    "tags": [],
+    "uri": "features/signin.feature"
+  }
+]
