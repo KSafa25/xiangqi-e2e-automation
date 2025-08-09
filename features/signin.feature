@@ -1,4 +1,5 @@
 # features/signin.feature
+@signin
 Feature: User Sign In
   As a user
   I want to sign in to my account
