@@ -10,8 +10,8 @@ module.exports = {
       'features/**/*.feature'
     ],
     format: [
-      'json:cucumber-report.json', // Required for the HTML report
-      'summary' // Removed 'pretty' formatter
+      'json:cucumber-report.json',
+      'summary'
     ],
     publishQuiet: true,
     timeout: 60000
