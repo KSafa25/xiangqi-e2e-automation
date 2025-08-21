@@ -67,3 +67,17 @@ Then('the user should see the main game page', async function (this: ICustomWorl
   // This verifies that the final sign-in was successful
   console.log('Sign-in verification successful. E2E flow complete!');
 });
+
+When('the user deletes the account', async function (this: ICustomWorld) {
+  const { xiangqiPage } = this.pages;
+  console.log('Attempting to delete the account...');
+  await xiangqiPage.deleteAccount(password);
+  console.log('Account deletion step complete.');
+});
+
+Then('the user should be on the sign-in page', async function (this: ICustomWorld) {
+  const { xiangqiPage } = this.pages;
+  // This verifies that the deletion was successful by checking if the sign-in form is visible again
+  await xiangqiPage.verifyUserLoggedOut();
+  console.log('Account deletion successful. User is on the sign-in page. E2E flow complete!');
+});

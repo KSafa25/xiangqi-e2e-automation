@@ -1,5 +1,6 @@
 import { Before, After, IWorldOptions, World, setWorldConstructor, setDefaultTimeout } from '@cucumber/cucumber';
 import { Browser, BrowserContext, Page, chromium } from '@playwright/test';
+//import { XiangqiPage, TempMailPage } from '../page_objects/XiangqiPage';
 import { XiangqiPage, TempMailPage } from '../page_objects/XiangqiPage';
 import { SignInPage } from '../page_objects/SignInPage'; // Adjust path if needed
 

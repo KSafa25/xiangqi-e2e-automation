@@ -11,3 +11,5 @@ Feature: Full User Authentication Flow
     And the user signs out from the new account
     Then the user should be able to sign back in with the new credentials
     And the user should see the main game page
+    And the user deletes the account
+    Then the user should be on the sign-in page

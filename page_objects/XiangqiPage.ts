@@ -24,6 +24,14 @@ export class XiangqiPage {
   readonly passwordLoginInput: Locator;
   readonly finalSignInButton: Locator;
   readonly mainGamePageIdentifier: Locator;
+// Locators for account deletion
+  readonly settingsButton: Locator;
+  readonly accountLink: Locator;
+  readonly deleteAccountButton: Locator;
+  readonly reasonForDeletionInput: Locator;
+  readonly passwordDeleteInput: Locator;
+  readonly confirmDeleteButton: Locator;
+  readonly sessionExpiredText: Locator;
 
 
   constructor(page: Page) {
@@ -48,6 +56,16 @@ export class XiangqiPage {
     this.passwordLoginInput = page.getByRole('textbox', { name: 'Password' });
     this.finalSignInButton = page.locator('form').getByRole('button', { name: 'Sign In' });
     this.mainGamePageIdentifier = page.getByRole('button', { name: 'New Game' });
+
+    //Delete account
+    this.settingsButton = page.getByRole('button', { name: 'settingsSettings' });
+    this.accountLink = page.getByText('Account');
+    this.deleteAccountButton = page.getByRole('button', { name: 'Delete Account' });
+    this.reasonForDeletionInput = page.getByRole('textbox', { name: 'Please mention reason of' });
+    this.passwordDeleteInput = page.getByRole('textbox', { name: 'Enter Password' });
+    this.confirmDeleteButton = page.getByRole('button', { name: 'Delete', exact: true });
+    this.sessionExpiredText = page.getByText('Session Expired');
+
   }
 
   /**
@@ -127,6 +145,32 @@ async signOut(username: string) {
     await this.finalSignInButton.click();
   }
 
+    /**
+   * Navigates to the account settings and deletes the user account.
+   * @param password - The password of the account to be deleted.
+   */
+  async deleteAccount(password: string) {
+    console.log('Navigating to settings to delete account...');
+    await this.settingsButton.click();
+    await this.accountLink.click();
+    
+    // Scroll down to ensure the delete button is in view, if necessary
+    await this.deleteAccountButton.scrollIntoViewIfNeeded();
+    await this.deleteAccountButton.click();
+
+    await this.reasonForDeletionInput.fill('deleting newly created account');
+    await this.passwordDeleteInput.fill(password);
+    
+    await this.confirmDeleteButton.click();
+    console.log('Account deletion process initiated.');
+  }
+
+  /**
+   * Verifies that the user has been logged out and is on the sign-in page.
+   */
+  async verifyUserLoggedOut() {
+    await expect(this.finalSignInButton).toBeVisible({ timeout: 15000 });
+  }
 //   /**
 //    * Verifies that the user has successfully landed on the main game page.
 //    */
