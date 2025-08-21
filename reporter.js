@@ -10,7 +10,7 @@ const options = {
   launchReport: true,
   metadata: {
     "App Version": "1.0.0",
-    "Test Environment": "Production",
+    "Test Environment": "Staging",
     "Browser": "Chrome",
     "Platform": "macOS"
   }
