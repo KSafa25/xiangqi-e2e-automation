@@ -9,21 +9,21 @@ Given('I am on the sign in page', async function (this: ICustomWorld) {
 
 When('I enter my email and password', async function (this: ICustomWorld) {
   const { signInPage } = this.pages;
-  const email = 'Ksafa'; // valid username
+  const email = 'e2euser'; // valid username
   const password = 'Fox@1234'; // valid password
   await signInPage.enterCredentials(email, password);
 });
 
 When('I enter my email and an incorrect password', async function (this: ICustomWorld) {
   const { signInPage } = this.pages;
-  const email = 'Ksafa';
+  const email = 'e2euser';
   const password = 'WrongPassword';
   await signInPage.enterCredentials(email, password);
 });
 
 When('I re-enter my email and correct password', async function (this: ICustomWorld) {
   const { signInPage } = this.pages;
-  const email = 'Ksafa';
+  const email = 'e2euser';
   const password = 'Fox@1234';
   await signInPage.enterCredentials(email, password);
 });
@@ -47,7 +47,7 @@ Then(
 );
 Then('I retry with correct password if invalid password toast appears', async function (this: ICustomWorld) {
   const { signInPage } = this.pages;
-  const email = 'Ksafa';
+  const email = 'e2euser';
   const correctPassword = 'Fox@1234';
   const expectedError = 'Invalid password';
 

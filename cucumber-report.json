@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1007677832
+              "duration": 1477947999
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6658069625
+              "duration": 18712501499
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 36070711083
+              "duration": 36388319875
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1310209917
+              "duration": 1368940834
             }
           },
           {
@@ -66,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1629184792
+              "duration": 1671989083
             }
           },
           {
@@ -79,7 +79,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 871417
+              "duration": 1068957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the user deletes the account",
+            "match": {
+              "location": "step_definitions/user_auth.steps.ts:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5082617749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the user should be on the sign-in page",
+            "match": {
+              "location": "step_definitions/user_auth.steps.ts:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 877644625
             }
           },
           {
@@ -87,7 +113,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 164048792
+              "duration": 166111084
             }
           }
         ],
