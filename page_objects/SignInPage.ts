@@ -30,6 +30,12 @@ export class SignInPage {
     await this.signInButton().click();
   }
 
+    // New method for logging in
+  async signIn(username: string, password: string) {
+    await this.enterCredentials(username, password);
+    await this.clickSignInButton();
+  }
+
   async verifyLoginRedirectToLobby() {
     await expect(this.page).toHaveURL(`${BASE_URL}/`);
   }
