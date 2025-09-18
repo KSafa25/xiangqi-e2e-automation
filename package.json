@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/KSafa25/xiangqi-e2e-automation#readme",
   "devDependencies": {
-    "@cucumber/cucumber": "^12.1.0",
-    "@playwright/test": "^1.54.2",
+    "@cucumber/cucumber": "^12.2.0",
+    "@playwright/test": "^1.55.0",
     "@types/cucumber": "^6.0.1",
     "@types/dotenv": "^6.1.1",
     "@types/node": "^24.2.0",

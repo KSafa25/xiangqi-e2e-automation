@@ -1,10 +1,7 @@
-// step_definitions/setting.steps.ts
 import { Given, When, Then } from '@cucumber/cucumber';
+import { ICustomWorld } from '../hooks/hooks'; // Adjust path if needed
 import { expect } from '@playwright/test';
-import { ICustomWorld } from '../hooks/hooks'; // adjust path if needed
 import { BASE_URL } from '../config/globals';
-
-// Note: this file assumes this.pages.settingsPage exists and is instance of SettingsPage
 
 Given('the user is on the lobby page', async function (this: ICustomWorld) {
   // check the page URL (use xiangqiPage.page from your world)
@@ -15,89 +12,134 @@ When('the user navigates to the settings page', async function (this: ICustomWor
   await this.pages.settingsPage.navigateToSettings();
 });
 
-When('the user changes the language from {string} to {string}', async function (this: ICustomWorld, from: string, to: string) {
-  await this.pages.settingsPage.changeLanguage(from, to);
+Then('the user toggles on the dark theme', async function () {
+  await this.pages.settingsPage.toggleDarkTheme(true);
 });
 
-When('the user taps the save button with label {string}', async function (this: ICustomWorld, label: string) {
-  await this.pages.settingsPage.clickSave(label);
+Then('the user changes the recent games from public to private', async function () {
+  await this.pages.settingsPage.changeRecentGames("Private");
 });
 
-When('the user taps the save button', async function (this: ICustomWorld) {
-  await this.pages.settingsPage.clickSave();
+Then('the user changes who can challenge me to friends only', async function () {
+  await this.pages.settingsPage.changeChallengeOption("Friends Only");
 });
 
-Then('the user sees the updated settings with text {string}', async function (this: ICustomWorld, text: string) {
-  await this.pages.settingsPage.expectTextVisible(text);
+Then('the user changes the piece style from traditional to english', async function () {
+  await this.pages.settingsPage.changePieceStyle("English");
 });
 
-// Piece style (simplified 'to' argument optional 'from' kept for readability)
-When('the user changes the piece style from {string} to {string}', async function (this: ICustomWorld, from: string, to: string) {
-  await this.pages.settingsPage.changePieceStyle(to);
-});
-When('the user changes the piece style to {string}', async function (this: ICustomWorld, to: string) {
-  await this.pages.settingsPage.changePieceStyle(to);
+Then('the user hits the save button', async function () {
+  await this.pages.settingsPage.saveChanges();
 });
 
-When('the user enables Dark Mode', async function (this: ICustomWorld) {
-  await this.pages.settingsPage.setDarkMode(true);
-});
-When('the user disables Dark Mode', async function (this: ICustomWorld) {
-  await this.pages.settingsPage.setDarkMode(false);
+Then('the settings are updated accordingly', async function () {
+  await this.pages.settingsPage.verifySettingsUpdated();
 });
 
-When('the user changes Recent Games from {string} to {string}', async function (this: ICustomWorld, from: string, to: string) {
-  await this.pages.settingsPage.changeRecentGames(to);
-});
-When('the user sets Recent Games to {string}', async function (this: ICustomWorld, to: string) {
-  await this.pages.settingsPage.changeRecentGames(to);
+When('the user navigates to board and pieces settings', async function () {
+  await this.pages.settingsPage.openBoardAndPieces();
 });
 
-When('the user changes {string} from {string} to {string}', async function (this: ICustomWorld, setting: string, from: string, to: string) {
-  // if the setting is "Who can challenge me" route it; otherwise no-op or extend
-  if (setting === 'Who can challenge me' || setting === 'Who can challenge me?') {
-    await this.pages.settingsPage.changeChallengePermission(to);
-  } else {
-    // fallback: attempt matching known settings
-    if (/Recent Games/i.test(setting)) {
-      await this.pages.settingsPage.changeRecentGames(to);
-    } else {
-      // you can extend this to support other setting names
-      throw new Error(`Unhandled setting "${setting}" in step definition`);
-    }
-  }
+Then('the user changes the board style from wooden to simple', async function () {
+  await this.pages.settingsPage.changeBoardStyle("Simple");
 });
 
-// Generic save (same as "tap the save button")
-When('the user saves the settings', async function (this: ICustomWorld) {
-  await this.pages.settingsPage.clickSave();
+Then('the user hits the save button for board', async function () {
+  await this.pages.settingsPage.saveChanges();
 });
 
-Then('the settings are successfully updated', async function (this: ICustomWorld) {
-  await this.pages.settingsPage.expectSettingsUpdated();
+Then('a toast message should appear and the board settings are applied', async function () {
+  await this.pages.settingsPage.verifyToastAppears();
 });
 
-// Navigation to sub-pages in settings (Board & Pieces, Account, Notifications, etc.)
-When('the user navigates to the {string} settings page', async function (this: ICustomWorld, subPage: 'General' | 'Board & Pieces' | 'Account' | 'Notifications' | 'Subscription') {
-  // the SettingsPage might have a method navigateToSubPage — if not, we can click list item
-  await this.pages.settingsPage.page.getByRole('listitem').filter({ hasText: subPage }).click();
+When('the user navigates to the account settings', async function () {
+  await this.pages.settingsPage.openAccount();
 });
 
-// Board & Pieces operations
-When('the user changes the board style to {string}', async function (this: ICustomWorld, style: string) {
-  await this.pages.settingsPage.changeBoardStyle(style);
-});
-Then('the board style is set to {string}', async function (this: ICustomWorld, style: string) {
-  await this.pages.settingsPage.expectBoardStyleState(style);
+Then('the account page appears', async function () {
+  await this.pages.settingsPage.verifyAccountPage();
 });
 
-// Final checks for Dark Mode / Recent Games state if used in feature
-Then('Dark Mode should be disabled', async function (this: ICustomWorld) {
-  await this.pages.settingsPage.setDarkMode(false); // or call expect if prefer
+When('the user navigates to notifications settings', async function () {
+  await this.pages.settingsPage.openNotifications();
 });
-Then('the Recent Games setting is {string}', async function (this: ICustomWorld, state: string) {
-  await this.pages.settingsPage.expectRecentGamesState(state);
+
+Then('the notifications page appears', async function () {
+  await this.pages.settingsPage.verifyNotificationsPage();
 });
-Then('the "Who can challenge me" setting is {string}', async function (this: ICustomWorld, state: string) {
-  await this.pages.settingsPage.expectChallengeState(state);
+
+When('the user navigates to subscription settings', async function () {
+  await this.pages.settingsPage.openSubscription();
+});
+
+Then('the subscription page appears', async function () {
+  await this.pages.settingsPage.verifySubscriptionPage();
+});
+
+When('the user navigates to general settings', async function () {
+  await this.pages.settingsPage.openGeneral();
+});
+
+Then('the general page appears', async function () {
+  await this.pages.settingsPage.verifyGeneralPage();
+});
+
+Then('the user toggles off the dark theme', async function () {
+  await this.pages.settingsPage.toggleDarkTheme(false);
+});
+
+Then('the user changes the recent games from private to public', async function () {
+  await this.pages.settingsPage.changeRecentGames("Public");
+});
+
+Then('the user changes who can challenge me to any user', async function () {
+  await this.pages.settingsPage.changeChallengeOption("All Users");
+});
+
+Then('the settings are saved successfully', async function () {
+  await this.pages.settingsPage.verifyToastAppears();
+});
+
+// When('the user changes the language to Tiếng Việt', async function () {
+//   await this.pages.settingsPage.changeLanguage("Tiếng Việt");
+// });
+
+// Then('the language is set to Tiếng Việt', async function () {
+//   await this.pages.settingsPage.verifyLanguage("Tiếng Việt");
+// });
+
+// When('the user changes the language back to English', async function () {
+//   await this.pages.settingsPage.changeLanguage("English");
+// });
+
+// Then('the user taps on Lưu to save changes', async function () {
+//   await this.pages.settingsPage.saveChangesWithVietnamese();
+// });
+
+// Then('the language is set back to English', async function () {
+//   await this.pages.settingsPage.verifyLanguage("English");
+// });
+
+When('the user changes the language to Tiếng Việt', async function () {
+  await this.pages.settingsPage.changeLanguage('Tiếng Việt');
+});
+
+When('the user taps on save button', async function () {
+  await this.pages.settingsPage.saveChangesLocalized();
+});
+
+Then('the language is set to Tiếng Việt', async function () {
+  await this.pages.settingsPage.verifyLanguage('Tiếng Việt');
+});
+
+When('the user changes the language back to English', async function () {
+  await this.pages.settingsPage.changeLanguage('English');
+});
+
+When('the user taps on Lưu to save changes', async function () {
+  await this.pages.settingsPage.saveChangesLocalized();
+});
+
+Then('the language is set back to English', async function () {
+  await this.pages.settingsPage.verifyLanguage('English');
 });
