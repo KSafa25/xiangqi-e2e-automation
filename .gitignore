@@ -18,3 +18,8 @@ auth/user.json
 
 #Environment variables
 .env
+
+# Test reports
+cucumber-report.json
+reports/
+test-results/
