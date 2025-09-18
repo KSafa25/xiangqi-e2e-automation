@@ -1,5 +1,498 @@
 [
   {
+    "description": "  As a user\n  I want to sign in to my account\n  So that I can access my profile and game history",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-sign-in;successful-sign-in-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Successful sign in with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1354758541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am on the sign in page",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4174479166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I enter my email and password",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 254629208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click the sign in button",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 188495542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I should be logged in and redirected to the lobby",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1873311832
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 219886749
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@signin",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-sign-in;unsuccessful-sign-in-with-invalid-credentials,-then-successful-retry",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Unsuccessful sign in with invalid credentials, then successful retry",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 614786333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I am on the sign in page",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4078629958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I enter my email and an incorrect password",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 303445957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I click the sign in button",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 166084833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I should see an error message with title 'Error' and content 'Invalid password'",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 882907541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I retry with correct password if invalid password toast appears",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 413483542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I should be logged in and redirected to the lobby",
+            "match": {
+              "location": "step_definitions/signin.steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 895313042
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 150958915
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@signin",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-sign-in",
+    "line": 3,
+    "keyword": "Feature",
+    "name": "User Sign In",
+    "tags": [
+      {
+        "name": "@signin",
+        "line": 2
+      }
+    ],
+    "uri": "features/01_signin.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-profile-functionality;as-a-signed-in-user,-i-can-view-and-edit-my-profile-details",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "As a signed-in user, I can view and edit my profile details",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 821642625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "a user is logged into the system as \"e2euser\"",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7310007791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "the user navigates to their profile page",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 543823917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the user's profile URL should contain \"e2euser\"",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 549541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the user's profile header elements are visible",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 860597291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the country flag is visible",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3592625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "the core profile information (Joined, Last Online, Friends) is visible",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6954166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "the user taps on the Friends button and navigates to the Friends page",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 236080791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the user navigates back to the profile page",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1155094375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "the user edits their profile details",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 272696374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "the user selects \"Oman\" as their country",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1216012374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "the user adds or updates their bio with \"this is the automation test account!\"",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113390790
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the user saves the changes to their profile",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2187694999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "the user updates the Recent Games visibility",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:78"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5009663625,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('div').filter({ hasText: /^Recent GamesPublic$/ }).locator('svg')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('div').filter({ hasText: /^Recent GamesPublic$/ }).locator('svg')\u001b[22m\n\n    at Proxy.<anonymous> (/Users/safa.khan/Documents/Projects/xiangqi-e2e-automation/node_modules/playwright/lib/matchers/expect.js:221:24)\n    at CustomWorld.<anonymous> (/Users/safa.khan/Documents/Projects/xiangqi-e2e-automation/step_definitions/profile.steps.ts:80:49)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "the user changes the Recent Games visibility to \"Private\"",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:83"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "the user navigates to Game History from the profile page",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:88"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "the user can see more games on the Game History page",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:93"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "the user navigates back to the profile page",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:50"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "the user resets all changes made to their profile",
+            "match": {
+              "location": "step_definitions/profile.steps.ts:98"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 173243125
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@profile",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-profile-functionality",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "User Profile Functionality",
+    "tags": [
+      {
+        "name": "@profile",
+        "line": 1
+      }
+    ],
+    "uri": "features/profile.feature"
+  },
+  {
     "description": "  As a logged-in user\n  I want to modify my settings\n  So that I can personalize my application experience.",
     "elements": [
       {
@@ -14,7 +507,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1299034083
+              "duration": 1080235166
             }
           },
           {
@@ -27,7 +520,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3042768167
+              "duration": 3053114583
             }
           },
           {
@@ -40,7 +533,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 285271334
+              "duration": 294836415
             }
           },
           {
@@ -53,7 +546,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 151796041
+              "duration": 286117832
             }
           },
           {
@@ -66,7 +559,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1123029417
+              "duration": 2562208
             }
           },
           {
@@ -79,7 +572,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 299167041
+              "duration": 1417291
             }
           },
           {
@@ -92,7 +585,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 244148667
+              "duration": 224437290
             }
           },
           {
@@ -105,7 +598,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4318833
+              "duration": 2460707
             }
           },
           {
@@ -118,7 +611,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 190252333
+              "duration": 219150709
             }
           },
           {
@@ -131,7 +624,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 290934000
+              "duration": 346212249
             }
           },
           {
@@ -144,7 +637,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 145694958
+              "duration": 175417749
             }
           },
           {
@@ -157,7 +650,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2201200333
+              "duration": 2231392458
             }
           },
           {
@@ -170,7 +663,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2209007791
+              "duration": 2209975749
             }
           },
           {
@@ -183,7 +676,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2224999041
+              "duration": 2253885875
             }
           },
           {
@@ -196,7 +689,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 219096250
+              "duration": 226705041
             }
           },
           {
@@ -209,7 +702,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5564999
+              "duration": 3997167
             }
           },
           {
@@ -222,7 +715,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 145261458
+              "duration": 192853250
             }
           },
           {
@@ -235,7 +728,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2625833
+              "duration": 324999458
             }
           },
           {
@@ -248,7 +741,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1999750
+              "duration": 337414040
             }
           },
           {
@@ -261,7 +754,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 175208334
+              "duration": 182058625
             }
           },
           {
@@ -274,7 +767,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2279957
+              "duration": 2730167
             }
           },
           {
@@ -287,7 +780,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 282877083
+              "duration": 339694041
             }
           },
           {
@@ -300,7 +793,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 152718250
+              "duration": 196346042
             }
           },
           {
@@ -313,7 +806,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 373486083
+              "duration": 361662833
             }
           },
           {
@@ -326,7 +819,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 307715041
+              "duration": 341738167
             }
           },
           {
@@ -339,7 +832,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2163691958
+              "duration": 2242705374
             }
           },
           {
@@ -352,7 +845,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10364958
+              "duration": 11421083
             }
           },
           {
@@ -360,11 +853,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 177169541
+              "duration": 160016250
             }
           }
         ],
         "tags": [
+          {
+            "name": "@prelogin",
+            "line": 6
+          },
           {
             "name": "@settings",
             "line": 6
@@ -379,5 +876,140 @@
     "name": "User Settings Management",
     "tags": [],
     "uri": "features/setting.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "full-user-authentication-flow;successfully-register,-sign-out,-and-sign-back-in",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Successfully register, sign out, and sign back in",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 581646334
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "the user navigates to the Xiangqi website",
+            "match": {
+              "location": "step_definitions/user_auth.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3240401916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "the user creates a new account using a temporary email",
+            "match": {
+              "location": "step_definitions/user_auth.steps.ts:14"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 53538649458,
+              "error_message": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#react-select-2-placeholder')\u001b[22m\n\n    at XiangqiPage.completeProfile (/Users/safa.khan/Documents/Projects/xiangqi-e2e-automation/page_objects/XiangqiPage.ts:116:32)\n    at async CustomWorld.<anonymous> (/Users/safa.khan/Documents/Projects/xiangqi-e2e-automation/step_definitions/user_auth.steps.ts:46:3)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "the user signs out from the new account",
+            "match": {
+              "location": "step_definitions/user_auth.steps.ts:50"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the user should be able to sign back in with the new credentials",
+            "match": {
+              "location": "step_definitions/user_auth.steps.ts:58"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "the user should see the main game page",
+            "match": {
+              "location": "step_definitions/user_auth.steps.ts:65"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the user deletes the account",
+            "match": {
+              "location": "step_definitions/user_auth.steps.ts:71"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the user should be on the sign-in page",
+            "match": {
+              "location": "step_definitions/user_auth.steps.ts:78"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 245170041
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@e2e-flow",
+            "line": 7
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "full-user-authentication-flow",
+    "line": 5,
+    "keyword": "Feature",
+    "name": "Full User Authentication Flow",
+    "tags": [],
+    "uri": "features/user_authentication_flow.feature"
   }
 ]

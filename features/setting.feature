@@ -3,7 +3,7 @@ Feature: User Settings Management
   I want to modify my settings
   So that I can personalize my application experience.
 
-  @settings
+  @prelogin @settings
   Scenario: User successfully updates and reverts all settings
     Given the user is on the lobby page
     When the user navigates to the settings page
