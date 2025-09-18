@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 3307595250
+              "duration": 1391940458
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5601779083
+              "duration": 2866727666
             }
           },
           {
@@ -39,9 +39,8 @@
               "location": "step_definitions/user_auth.steps.ts:14"
             },
             "result": {
-              "status": "failed",
-              "duration": 60007424291,
-              "error_message": "Error: function timed out, ensure the promise resolves within 60000 milliseconds\n    at Timeout.<anonymous> (/Users/safa.khan/Documents/Projects/xiangqi-e2e-automation/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:588:17)\n    at processTimers (node:internal/timers:523:7)"
+              "status": "passed",
+              "duration": 49459337417
             }
           },
           {
@@ -53,8 +52,8 @@
               "location": "step_definitions/user_auth.steps.ts:50"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 1369489957
             }
           },
           {
@@ -66,8 +65,8 @@
               "location": "step_definitions/user_auth.steps.ts:58"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 1633888208
             }
           },
           {
@@ -79,8 +78,8 @@
               "location": "step_definitions/user_auth.steps.ts:65"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 770333
             }
           },
           {
@@ -92,8 +91,8 @@
               "location": "step_definitions/user_auth.steps.ts:71"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 4753559957
             }
           },
           {
@@ -105,8 +104,8 @@
               "location": "step_definitions/user_auth.steps.ts:78"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 461741749
             }
           },
           {
@@ -114,7 +113,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 135406000
+              "duration": 181417832
             }
           }
         ],
