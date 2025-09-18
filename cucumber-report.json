@@ -4,251 +4,109 @@
     "elements": [
       {
         "description": "",
-        "id": "user-profile-functionality;as-a-signed-in-user,-i-can-view-and-edit-my-profile-details",
+        "id": "full-user-authentication-flow;successfully-register,-sign-out,-and-sign-back-in",
         "keyword": "Scenario",
-        "line": 4,
-        "name": "As a signed-in user, I can view and edit my profile details",
+        "line": 8,
+        "name": "Successfully register, sign out, and sign back in",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1152241708
+              "duration": 3307595250
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
-            "name": "a user is logged into the system as \"e2euser\"",
+            "line": 9,
+            "name": "the user navigates to the Xiangqi website",
             "match": {
-              "location": "step_definitions/profile.steps.ts:8"
+              "location": "step_definitions/user_auth.steps.ts:9"
             },
             "result": {
               "status": "passed",
-              "duration": 8748588291
+              "duration": 5601779083
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 7,
-            "name": "the user navigates to their profile page",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1263674875
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "the user's profile URL should contain \"e2euser\"",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 586542
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 9,
-            "name": "the user's profile header elements are visible",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4475458
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
             "line": 10,
-            "name": "the country flag is visible",
+            "name": "the user creates a new account using a temporary email",
             "match": {
-              "location": "step_definitions/profile.steps.ts:32"
+              "location": "step_definitions/user_auth.steps.ts:14"
             },
             "result": {
-              "status": "passed",
-              "duration": 3208667
+              "status": "failed",
+              "duration": 60007424291,
+              "error_message": "Error: function timed out, ensure the promise resolves within 60000 milliseconds\n    at Timeout.<anonymous> (/Users/safa.khan/Documents/Projects/xiangqi-e2e-automation/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:588:17)\n    at processTimers (node:internal/timers:523:7)"
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 11,
-            "name": "the core profile information (Joined, Last Online, Friends) is visible",
+            "name": "the user signs out from the new account",
             "match": {
-              "location": "step_definitions/profile.steps.ts:38"
+              "location": "step_definitions/user_auth.steps.ts:50"
             },
             "result": {
-              "status": "passed",
-              "duration": 10032083
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
-            "keyword": "And ",
+            "keyword": "Then ",
             "line": 12,
-            "name": "the user taps on the Friends button and navigates to the Friends page",
+            "name": "the user should be able to sign back in with the new credentials",
             "match": {
-              "location": "step_definitions/profile.steps.ts:45"
+              "location": "step_definitions/user_auth.steps.ts:58"
             },
             "result": {
-              "status": "passed",
-              "duration": 595732250
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
-            "name": "the user navigates back to the profile page",
+            "name": "the user should see the main game page",
             "match": {
-              "location": "step_definitions/profile.steps.ts:50"
+              "location": "step_definitions/user_auth.steps.ts:65"
             },
             "result": {
-              "status": "passed",
-              "duration": 1802771708
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "And ",
+            "line": 14,
+            "name": "the user deletes the account",
+            "match": {
+              "location": "step_definitions/user_auth.steps.ts:71"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
             "line": 15,
-            "name": "the user edits their profile details",
+            "name": "the user should be on the sign-in page",
             "match": {
-              "location": "step_definitions/profile.steps.ts:56"
+              "location": "step_definitions/user_auth.steps.ts:78"
             },
             "result": {
-              "status": "passed",
-              "duration": 615720999
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "the user selects \"Oman\" as their country",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:61"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1160729500
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 17,
-            "name": "the user adds or updates their bio with \"this is the automation test account!\"",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:67"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 516501333
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "the user saves the changes to their profile",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:72"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2552497208
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 20,
-            "name": "the user updates the Recent Games visibility",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:78"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9923458
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 21,
-            "name": "the user changes the Recent Games visibility to \"Private\"",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:83"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1065255541
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 23,
-            "name": "the user navigates to Game History from the profile page",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:88"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 622765708
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 24,
-            "name": "the user can see more games on the Game History page",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:93"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2882832
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 25,
-            "name": "the user navigates back to the profile page",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:50"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1687431124
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 27,
-            "name": "the user resets all changes made to their profile",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:98"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5384824333
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -256,29 +114,24 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 185034207
+              "duration": 135406000
             }
           }
         ],
         "tags": [
           {
-            "name": "@profile",
-            "line": 1
+            "name": "@e2e-flow",
+            "line": 7
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "user-profile-functionality",
-    "line": 2,
+    "id": "full-user-authentication-flow",
+    "line": 5,
     "keyword": "Feature",
-    "name": "User Profile Functionality",
-    "tags": [
-      {
-        "name": "@profile",
-        "line": 1
-      }
-    ],
-    "uri": "features/profile.feature"
+    "name": "Full User Authentication Flow",
+    "tags": [],
+    "uri": "features/user_authentication_flow.feature"
   }
 ]
