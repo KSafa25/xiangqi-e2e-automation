@@ -2,6 +2,7 @@
 
 module.exports = {
   default: {
+    requireModule: ['ts-node/register'],
     require: [
       'hooks/**/*.ts',
       'step_definitions/**/*.ts'

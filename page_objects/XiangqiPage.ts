@@ -114,6 +114,14 @@ export class XiangqiPage {
     await this.passwordInput.fill(password);
 
     // Check and change Country
+    
+    // await this.countryDropdown.click();
+    // await this.page.getByText('China', { exact: true }).click();
+
+    // await this.skillLevelDropdown.click();
+    // await this.page.getByText('Beginner').click();
+
+// Check and change Country
 const currentCountry = await this.page.locator('.react-select__single-value').first().textContent();
 
 if (currentCountry?.includes('Pakistan')) {
