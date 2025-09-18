@@ -24,8 +24,10 @@
     "@cucumber/cucumber": "^12.1.0",
     "@playwright/test": "^1.54.2",
     "@types/cucumber": "^6.0.1",
+    "@types/dotenv": "^6.1.1",
     "@types/node": "^24.2.0",
     "cucumber-html-reporter": "^7.1.1",
+    "dotenv": "^17.2.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   }

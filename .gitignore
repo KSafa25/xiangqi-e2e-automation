@@ -7,3 +7,14 @@ dist/
 # IDE files
 .vscode/
 .DS_Store
+
+
+#Playwright reports
+/playwright-report/
+/test-results/
+
+#Authentication state file
+auth/user.json
+
+#Environment variables
+.env

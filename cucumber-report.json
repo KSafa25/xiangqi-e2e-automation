@@ -1,254 +1,486 @@
 [
   {
-    "description": "",
+    "description": "  As a logged-in user\n  I want to modify my settings\n  So that I can personalize my application experience.",
     "elements": [
       {
         "description": "",
-        "id": "user-profile-functionality;as-a-signed-in-user,-i-can-view-and-edit-my-profile-details",
+        "id": "user-settings-management;user-successfully-updates-and-reverts-all-settings",
         "keyword": "Scenario",
-        "line": 4,
-        "name": "As a signed-in user, I can view and edit my profile details",
+        "line": 7,
+        "name": "User successfully updates and reverts all settings",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1152241708
+              "duration": 1192967624
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
-            "name": "a user is logged into the system as \"e2euser\"",
+            "line": 8,
+            "name": "the user is on the lobby page",
             "match": {
-              "location": "step_definitions/profile.steps.ts:8"
+              "location": "step_definitions/setting.steps.ts:9"
             },
             "result": {
               "status": "passed",
-              "duration": 8748588291
+              "duration": 2606964415
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 7,
-            "name": "the user navigates to their profile page",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1263674875
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "the user's profile URL should contain \"e2euser\"",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:22"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 586542
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
             "line": 9,
-            "name": "the user's profile header elements are visible",
+            "name": "the user navigates to the settings page",
             "match": {
-              "location": "step_definitions/profile.steps.ts:27"
+              "location": "step_definitions/setting.steps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 4475458
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 10,
-            "name": "the country flag is visible",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:32"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3208667
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 11,
-            "name": "the core profile information (Joined, Last Online, Friends) is visible",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:38"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 10032083
+              "duration": 233707666
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 12,
-            "name": "the user taps on the Friends button and navigates to the Friends page",
+            "name": "the user changes the language from \"English\" to \"中文（简体）\"",
             "match": {
-              "location": "step_definitions/profile.steps.ts:45"
+              "location": "step_definitions/setting.steps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 595732250
+              "duration": 1311032875
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
-            "name": "the user navigates back to the profile page",
+            "name": "the user taps the save button with label \"保存\"",
             "match": {
-              "location": "step_definitions/profile.steps.ts:50"
+              "location": "step_definitions/setting.steps.ts:22"
             },
             "result": {
-              "status": "passed",
-              "duration": 1802771708
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 15,
-            "name": "the user edits their profile details",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:56"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 615720999
+              "status": "failed",
+              "duration": 30108715709,
+              "error_message": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '保存' })\u001b[22m\n\n    at SettingsPage.clickSave (/Users/safa.khan/Documents/Projects/xiangqi-e2e-automation/page_objects/SettingsPage.ts:123:60)\n    at CustomWorld.<anonymous> (/Users/safa.khan/Documents/Projects/xiangqi-e2e-automation/step_definitions/setting.steps.ts:23:33)"
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 16,
-            "name": "the user selects \"Oman\" as their country",
+            "line": 14,
+            "name": "the user sees the updated settings with text \"保存\"",
             "match": {
-              "location": "step_definitions/profile.steps.ts:61"
+              "location": "step_definitions/setting.steps.ts:30"
             },
             "result": {
-              "status": "passed",
-              "duration": 1160729500
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 17,
-            "name": "the user adds or updates their bio with \"this is the automation test account!\"",
+            "name": "the user changes the language from \"中文（简体）\" to \"Tiếng Việt\"",
             "match": {
-              "location": "step_definitions/profile.steps.ts:67"
+              "location": "step_definitions/setting.steps.ts:18"
             },
             "result": {
-              "status": "passed",
-              "duration": 516501333
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 18,
-            "name": "the user saves the changes to their profile",
+            "name": "the user taps the save button with label \"保存\"",
             "match": {
-              "location": "step_definitions/profile.steps.ts:72"
+              "location": "step_definitions/setting.steps.ts:22"
             },
             "result": {
-              "status": "passed",
-              "duration": 2552497208
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 20,
-            "name": "the user updates the Recent Games visibility",
-            "match": {
-              "location": "step_definitions/profile.steps.ts:78"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9923458
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 21,
-            "name": "the user changes the Recent Games visibility to \"Private\"",
+            "line": 19,
+            "name": "the user sees the updated settings with text \"Lưu\"",
             "match": {
-              "location": "step_definitions/profile.steps.ts:83"
+              "location": "step_definitions/setting.steps.ts:30"
             },
             "result": {
-              "status": "passed",
-              "duration": 1065255541
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
-            "line": 23,
-            "name": "the user navigates to Game History from the profile page",
+            "keyword": "And ",
+            "line": 22,
+            "name": "the user changes the language from \"Tiếng Việt\" to \"English\"",
             "match": {
-              "location": "step_definitions/profile.steps.ts:88"
+              "location": "step_definitions/setting.steps.ts:18"
             },
             "result": {
-              "status": "passed",
-              "duration": 622765708
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "the user taps the save button with label \"Lưu\"",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:22"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 24,
-            "name": "the user can see more games on the Game History page",
+            "name": "the user sees the updated settings with text \"Save\"",
             "match": {
-              "location": "step_definitions/profile.steps.ts:93"
+              "location": "step_definitions/setting.steps.ts:30"
             },
             "result": {
-              "status": "passed",
-              "duration": 2882832
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 25,
-            "name": "the user navigates back to the profile page",
+            "line": 27,
+            "name": "the user changes the piece style from \"Traditional\" to \"English\"",
             "match": {
-              "location": "step_definitions/profile.steps.ts:50"
+              "location": "step_definitions/setting.steps.ts:35"
             },
             "result": {
-              "status": "passed",
-              "duration": 1687431124
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "the user enables Dark Mode",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:42"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "the user changes Recent Games from \"Public\" to \"Private\"",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:49"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "the user changes \"Who can challenge me\" from \"All Users\" to \"Friends Only\"",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:56"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "the user taps the save button with label \"Save\"",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:22"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 27,
-            "name": "the user resets all changes made to their profile",
+            "line": 38,
+            "name": "the settings are successfully updated",
             "match": {
-              "location": "step_definitions/profile.steps.ts:98"
+              "location": "step_definitions/setting.steps.ts:76"
             },
             "result": {
-              "status": "passed",
-              "duration": 5384824333
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "the user navigates to the \"Board & Pieces\" settings page",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:81"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "the user changes the board style to \"Simple\"",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:87"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "the user saves the settings",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:72"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 44,
+            "name": "the board style is set to \"Simple\"",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:90"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 47,
+            "name": "the user navigates to the \"Account\" settings page",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:81"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 48,
+            "name": "the user navigates to the \"Notifications\" settings page",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:81"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "the user navigates to the \"Subscription\" settings page",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:81"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 52,
+            "name": "the user navigates to the \"General\" settings page",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:81"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "the user disables Dark Mode",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:45"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "the user sets Recent Games to \"Public\"",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:52"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "the user sets \"Who can challenge me\" to \"All Users\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "the user saves the settings",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:72"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 57,
+            "name": "Dark Mode should be disabled",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:95"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "the Recent Games setting is \"Public\"",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:98"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 61,
+            "name": "the user navigates to the \"Board & Pieces\" settings page",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:81"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 62,
+            "name": "the user changes the board style to \"Wooden\"",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:87"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 63,
+            "name": "the user saves the settings",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:72"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 64,
+            "name": "the board style is set to \"Wooden\"",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:90"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 65,
+            "name": "the settings are successfully updated",
+            "match": {
+              "location": "step_definitions/setting.steps.ts:76"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -256,29 +488,24 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 185034207
+              "duration": 133468250
             }
           }
         ],
         "tags": [
           {
-            "name": "@profile",
-            "line": 1
+            "name": "@settings",
+            "line": 6
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "user-profile-functionality",
-    "line": 2,
+    "id": "user-settings-management",
+    "line": 1,
     "keyword": "Feature",
-    "name": "User Profile Functionality",
-    "tags": [
-      {
-        "name": "@profile",
-        "line": 1
-      }
-    ],
-    "uri": "features/profile.feature"
+    "name": "User Settings Management",
+    "tags": [],
+    "uri": "features/setting.feature"
   }
 ]
