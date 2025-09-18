@@ -22,4 +22,4 @@ auth/user.json
 # Test reports
 cucumber-report.json
 reports/
-test-results/
+test-results/cucumber-report.json
