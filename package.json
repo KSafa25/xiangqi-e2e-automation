@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cucumber-js --require-module ts-node/register --require \"./hooks/**/*.ts\" --require \"./step_definitions/**/*.ts\" --require \"./page_objects/**/*.ts\"",
-    "test:tag": "npx cucumber-js --require-module ts-node/register --require \"./hooks/**/*.ts\" --require \"./step_definitions/**/*.ts\" --require \"./page_objects/**/*.ts\" --tags @",
+    "test:tag": "npx cucumber-js --require-module ts-node/register --require \"./hooks/**/*.ts\" --require \"./step_definitions/**/*.ts\" --require \"./page_objects/**/*.ts\" --tags @signin",
     "test:report": "npm test && node reporter.js",
     "test:tag:report": "npx cucumber-js --require-module ts-node/register --require \"./hooks/**/*.ts\" --require \"./step_definitions/**/*.ts\" --require \"./page_objects/**/*.ts\" --tags @signin --format json:cucumber-report.json && node reporter.js"
   },

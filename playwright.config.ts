@@ -21,7 +21,7 @@ export default defineConfig({
   reporter: 'html',
 
   // Global setup script to run before all tests
-  globalSetup: require.resolve('./auth/global-setup'),
+  //globalSetup: require.resolve('./auth/global-setup'),
 
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */

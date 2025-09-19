@@ -1,0 +1,251 @@
+{
+  "cookies": [
+    {
+      "name": "_gid",
+      "value": "GA1.2.1760524548.1758287545",
+      "domain": ".xiangqi.com",
+      "path": "/",
+      "expires": 1758373945,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gat",
+      "value": "1",
+      "domain": ".xiangqi.com",
+      "path": "/",
+      "expires": 1758287605,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "CLID",
+      "value": "8d1ad074eca94631ae7fdedd93e712ef.20250919.20260919",
+      "domain": "www.clarity.ms",
+      "path": "/",
+      "expires": 1789823545.374378,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.10592579.1758287546",
+      "domain": ".xiangqi.com",
+      "path": "/",
+      "expires": 1766063545,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.337018293.1758287545",
+      "domain": ".xiangqi.com",
+      "path": "/",
+      "expires": 1792847546.441455,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_clck",
+      "value": "kpouh%5E2%5Efzg%5E1%5E2088",
+      "domain": ".xiangqi.com",
+      "path": "/",
+      "expires": 1789823546,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ph_phc_VjXykO9FlfUeblQX0X25DdeeH0uc0zpk6r3gJ1EVLon_posthog",
+      "value": "%7B%22distinct_id%22%3A%22Mahdeed110%22%2C%22%24epp%22%3Atrue%7D",
+      "domain": ".xiangqi.com",
+      "path": "/",
+      "expires": 1789823547,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "xq.refresh_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1ODI4NzU0NywianRpIjoiMjE5Yjg5NzEtNDM4Ni00YzIxLWEzNjYtZjU2Y2YxZDMyMDVkIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjkxOTI0LCJuYmYiOjE3NTgyODc1NDcsImV4cCI6MTc2MDg3OTU0N30.5C36_oVwMR0-9sOxg7EkaGiBrChxoX0aYT49EZP8aVQ",
+      "domain": "play.xiangqi.com",
+      "path": "/",
+      "expires": 1760879547,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "xiangqi.jwt_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1ODI4NzU0OCwianRpIjoiYTNhNDBlYTctYWRjNy00ZjdiLTkzOTUtN2IyMThlYjc5ODRjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6OTE5MjQsIm5iZiI6MTc1ODI4NzU0OCwiZXhwIjoxNzU5MzI0MzQ4fQ.kfB8Q6qVsC3DqIjW39mQvC_NzCFvMQgHTbxM2npLsO4",
+      "domain": "play.xiangqi.com",
+      "path": "/",
+      "expires": 1759151548,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_clsk",
+      "value": "wv6in5%5E1758287548247%5E2%5E1%5Ek.clarity.ms%2Fcollect",
+      "domain": ".xiangqi.com",
+      "path": "/",
+      "expires": 1758373948,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_08X9MHG84K",
+      "value": "GS2.1.s1758287545$o1$g1$t1758287548$j57$l0$h0",
+      "domain": ".xiangqi.com",
+      "path": "/",
+      "expires": 1792847548.45839,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_2ESXHRCMZZ",
+      "value": "GS2.1.s1758287545$o1$g1$t1758287548$j57$l0$h0",
+      "domain": ".xiangqi.com",
+      "path": "/",
+      "expires": 1792847548.463616,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_DEKS76T5JK",
+      "value": "GS2.1.s1758287546$o1$g1$t1758287548$j58$l0$h0",
+      "domain": ".xiangqi.com",
+      "path": "/",
+      "expires": 1792847548.468225,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "MUID",
+      "value": "31994518ECF46308068C5374EDFD6243",
+      "domain": ".bing.com",
+      "path": "/",
+      "expires": 1791983548.809938,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".c.bing.com",
+      "path": "/",
+      "expires": 1758892348.810175,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SRM_B",
+      "value": "31994518ECF46308068C5374EDFD6243",
+      "domain": ".c.bing.com",
+      "path": "/",
+      "expires": 1791983548.810248,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SM",
+      "value": "C",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MUID",
+      "value": "31994518ECF46308068C5374EDFD6243",
+      "domain": ".clarity.ms",
+      "path": "/",
+      "expires": 1791983549.058745,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": 1758892349.05882,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ANONCHK",
+      "value": "0",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": 1758288149.058857,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://play.xiangqi.com",
+      "localStorage": [
+        {
+          "name": "xiangqi.user",
+          "value": "{\"id\":91924,\"first_name\":null,\"last_name\":null,\"username\":\"Mahdeed110\",\"prev_username\":\"mahdeed0011\",\"identity\":\"Mahdeed110\",\"email\":\"mahdeed001@yopmail.com\",\"type\":1,\"muted\":false,\"banned\":false,\"active\":true,\"country\":{\"id\":208,\"code\":\"TW\",\"name\":\"Taiwan, China\"},\"language\":{},\"bio\":\"Hello\",\"profile_image\":\"https://s3.amazonaws.com/xiangqi-prod-media-xox8m5kg/medias/profile-images/L3WNx1.png?t=1758287547445\",\"locale\":\"en\",\"last_online\":\"2025-09-19 13:12:27.044290\",\"created_on\":\"2023-08-28 18:35:00.653564\",\"bullet_rating\":1523,\"rapid_rating\":863,\"daily_rating\":1523,\"linked_account_google\":false,\"linked_account_facebook\":false,\"linked_account_wechat\":false,\"linked_account_apple\":false,\"linked_account_moneta\":false,\"is_premium\":false,\"cancelled\":false}"
+        },
+        {
+          "name": "xiuuid",
+          "value": "\"a8fe4e0c-7f3e-4275-9147-6408306604bd\""
+        },
+        {
+          "name": "xiangqi.theme.name",
+          "value": "\"light\""
+        },
+        {
+          "name": "xiangqi.reviewSettings",
+          "value": "{\"stoppingIncorrectMoves\":[\"mistake\",\"blunder\"],\"stoppingOpponentMove\":false,\"showBestMove\":false}"
+        },
+        {
+          "name": "_gcl_ls",
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"creationTimeMs\":1758287545725},\"expires\":1766063545725}}"
+        },
+        {
+          "name": "xiangqi.blockedUsers",
+          "value": "[]"
+        },
+        {
+          "name": "ph_phc_VjXykO9FlfUeblQX0X25DdeeH0uc0zpk6r3gJ1EVLon_posthog",
+          "value": "{\"$initialization_time\":\"2025-09-19T13:12:24.877Z\",\"$configured_session_timeout_ms\":1800000,\"distinct_id\":\"Mahdeed110\",\"$device_id\":\"0199621a-c22e-7e5b-8942-9a37def25df2\",\"$user_state\":\"identified\",\"$session_recording_enabled_server_side\":false,\"$autocapture_disabled_server_side\":false,\"$heatmaps_enabled_server_side\":true,\"$web_vitals_enabled_server_side\":true,\"$web_vitals_allowed_metrics\":null,\"$exception_capture_enabled_server_side\":false,\"$error_tracking_suppression_rules\":[],\"$dead_clicks_enabled_server_side\":false,\"$active_feature_flags\":[],\"$enabled_feature_flags\":{},\"$feature_flag_payloads\":{},\"$feature_flag_details\":{},\"$feature_flag_request_id\":\"9a83ed84-74ec-4bcb-90ab-bff101ebd4c6\",\"$epp\":true,\"$user_id\":\"Mahdeed110\",\"$stored_person_properties\":{\"username\":\"Mahdeed110\",\"email\":\"mahdeed001@yopmail.com\",\"country\":\"Taiwan, China\",\"member_since\":\"28 August 2023\",\"linked_account_google\":false,\"linked_account_facebook\":false,\"account_type\":\"basic\",\"current_local_timezone\":\"Asia/Karachi\",\"unixTimestamp\":1758287547447}}"
+        },
+        {
+          "name": "xiangqi.pieceLocale",
+          "value": "\"zh\""
+        },
+        {
+          "name": "xiangqi.locale",
+          "value": "\"en\""
+        },
+        {
+          "name": "xiangqi.mutedUsers",
+          "value": "[]"
+        }
+      ]
+    }
+  ]
+}
