@@ -2,10 +2,40 @@
   "cookies": [
     {
       "name": "_gid",
-      "value": "GA1.2.1760524548.1758287545",
+      "value": "GA1.2.1555893618.1758307217",
       "domain": ".xiangqi.com",
       "path": "/",
-      "expires": 1758373945,
+      "expires": 1758393616,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "CLID",
+      "value": "5c2c8a2c062046069a8f74d2d02ad529.20250919.20260919",
+      "domain": "www.clarity.ms",
+      "path": "/",
+      "expires": 1789843217.057805,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.556908388.1758307217",
+      "domain": ".xiangqi.com",
+      "path": "/",
+      "expires": 1792867218.063639,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.178789192.1758307217",
+      "domain": ".xiangqi.com",
+      "path": "/",
+      "expires": 1766083217,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -15,47 +45,17 @@
       "value": "1",
       "domain": ".xiangqi.com",
       "path": "/",
-      "expires": 1758287605,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "CLID",
-      "value": "8d1ad074eca94631ae7fdedd93e712ef.20250919.20260919",
-      "domain": "www.clarity.ms",
-      "path": "/",
-      "expires": 1789823545.374378,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
-      "name": "_gcl_au",
-      "value": "1.1.10592579.1758287546",
-      "domain": ".xiangqi.com",
-      "path": "/",
-      "expires": 1766063545,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "_ga",
-      "value": "GA1.1.337018293.1758287545",
-      "domain": ".xiangqi.com",
-      "path": "/",
-      "expires": 1792847546.441455,
+      "expires": 1758307277,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_clck",
-      "value": "kpouh%5E2%5Efzg%5E1%5E2088",
+      "value": "1rinxil%5E2%5Efzg%5E1%5E2088",
       "domain": ".xiangqi.com",
       "path": "/",
-      "expires": 1789823546,
+      "expires": 1789843217,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -65,77 +65,77 @@
       "value": "%7B%22distinct_id%22%3A%22Mahdeed110%22%2C%22%24epp%22%3Atrue%7D",
       "domain": ".xiangqi.com",
       "path": "/",
-      "expires": 1789823547,
+      "expires": 1789843219,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "xq.refresh_token",
-      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1ODI4NzU0NywianRpIjoiMjE5Yjg5NzEtNDM4Ni00YzIxLWEzNjYtZjU2Y2YxZDMyMDVkIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjkxOTI0LCJuYmYiOjE3NTgyODc1NDcsImV4cCI6MTc2MDg3OTU0N30.5C36_oVwMR0-9sOxg7EkaGiBrChxoX0aYT49EZP8aVQ",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1ODMwNzIxOSwianRpIjoiNzBhZTYyYWUtMWZjNC00Y2NhLThhN2EtMDRmMmMwOGZlNjc0IiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjkxOTI0LCJuYmYiOjE3NTgzMDcyMTksImV4cCI6MTc2MDg5OTIxOX0.Vi3mhtt9Du4OYUFgpju4QCazW9gBdEFhVD4kUkMCitc",
       "domain": "play.xiangqi.com",
       "path": "/",
-      "expires": 1760879547,
-      "httpOnly": false,
-      "secure": false,
-      "sameSite": "Lax"
-    },
-    {
-      "name": "xiangqi.jwt_token",
-      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1ODI4NzU0OCwianRpIjoiYTNhNDBlYTctYWRjNy00ZjdiLTkzOTUtN2IyMThlYjc5ODRjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6OTE5MjQsIm5iZiI6MTc1ODI4NzU0OCwiZXhwIjoxNzU5MzI0MzQ4fQ.kfB8Q6qVsC3DqIjW39mQvC_NzCFvMQgHTbxM2npLsO4",
-      "domain": "play.xiangqi.com",
-      "path": "/",
-      "expires": 1759151548,
+      "expires": 1760899219,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_clsk",
-      "value": "wv6in5%5E1758287548247%5E2%5E1%5Ek.clarity.ms%2Fcollect",
+      "value": "1krb665%5E1758307220103%5E2%5E1%5Ek.clarity.ms%2Fcollect",
       "domain": ".xiangqi.com",
       "path": "/",
-      "expires": 1758373948,
+      "expires": 1758393620,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "xiangqi.jwt_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1ODMwNzIyMCwianRpIjoiMjZmN2E4NDgtNzk3ZC00ZTRmLTliNDktZmMyZTliZTgzNGJlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6OTE5MjQsIm5iZiI6MTc1ODMwNzIyMCwiZXhwIjoxNzU5MzQ0MDIwfQ.Wro2I9yUJI4LbzxEjwvNJBHMsrthP-1E9yBvAoDl7BQ",
+      "domain": "play.xiangqi.com",
+      "path": "/",
+      "expires": 1759171220,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_ga_08X9MHG84K",
-      "value": "GS2.1.s1758287545$o1$g1$t1758287548$j57$l0$h0",
+      "value": "GS2.1.s1758307217$o1$g1$t1758307220$j57$l0$h0",
       "domain": ".xiangqi.com",
       "path": "/",
-      "expires": 1792847548.45839,
+      "expires": 1792867220.519824,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_ga_2ESXHRCMZZ",
-      "value": "GS2.1.s1758287545$o1$g1$t1758287548$j57$l0$h0",
+      "value": "GS2.1.s1758307217$o1$g1$t1758307220$j57$l0$h0",
       "domain": ".xiangqi.com",
       "path": "/",
-      "expires": 1792847548.463616,
+      "expires": 1792867220.527827,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "_ga_DEKS76T5JK",
-      "value": "GS2.1.s1758287546$o1$g1$t1758287548$j58$l0$h0",
+      "value": "GS2.1.s1758307218$o1$g1$t1758307220$j58$l0$h0",
       "domain": ".xiangqi.com",
       "path": "/",
-      "expires": 1792847548.468225,
+      "expires": 1792867220.537576,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
     },
     {
       "name": "MUID",
-      "value": "31994518ECF46308068C5374EDFD6243",
+      "value": "0364911E64046D8918B08772650D6C79",
       "domain": ".bing.com",
       "path": "/",
-      "expires": 1791983548.809938,
+      "expires": 1792003221.194127,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -145,17 +145,17 @@
       "value": "0",
       "domain": ".c.bing.com",
       "path": "/",
-      "expires": 1758892348.810175,
+      "expires": 1758912021.194216,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "SRM_B",
-      "value": "31994518ECF46308068C5374EDFD6243",
+      "value": "0364911E64046D8918B08772650D6C79",
       "domain": ".c.bing.com",
       "path": "/",
-      "expires": 1791983548.810248,
+      "expires": 1792003221.194301,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -172,10 +172,10 @@
     },
     {
       "name": "MUID",
-      "value": "31994518ECF46308068C5374EDFD6243",
+      "value": "0364911E64046D8918B08772650D6C79",
       "domain": ".clarity.ms",
       "path": "/",
-      "expires": 1791983549.058745,
+      "expires": 1792003221.444588,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -185,7 +185,7 @@
       "value": "0",
       "domain": ".c.clarity.ms",
       "path": "/",
-      "expires": 1758892349.05882,
+      "expires": 1758912021.444703,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -195,7 +195,7 @@
       "value": "0",
       "domain": ".c.clarity.ms",
       "path": "/",
-      "expires": 1758288149.058857,
+      "expires": 1758307821.444773,
       "httpOnly": false,
       "secure": true,
       "sameSite": "None"
@@ -206,12 +206,16 @@
       "origin": "https://play.xiangqi.com",
       "localStorage": [
         {
+          "name": "xianqgi.notificationsCount",
+          "value": "0"
+        },
+        {
           "name": "xiangqi.user",
-          "value": "{\"id\":91924,\"first_name\":null,\"last_name\":null,\"username\":\"Mahdeed110\",\"prev_username\":\"mahdeed0011\",\"identity\":\"Mahdeed110\",\"email\":\"mahdeed001@yopmail.com\",\"type\":1,\"muted\":false,\"banned\":false,\"active\":true,\"country\":{\"id\":208,\"code\":\"TW\",\"name\":\"Taiwan, China\"},\"language\":{},\"bio\":\"Hello\",\"profile_image\":\"https://s3.amazonaws.com/xiangqi-prod-media-xox8m5kg/medias/profile-images/L3WNx1.png?t=1758287547445\",\"locale\":\"en\",\"last_online\":\"2025-09-19 13:12:27.044290\",\"created_on\":\"2023-08-28 18:35:00.653564\",\"bullet_rating\":1523,\"rapid_rating\":863,\"daily_rating\":1523,\"linked_account_google\":false,\"linked_account_facebook\":false,\"linked_account_wechat\":false,\"linked_account_apple\":false,\"linked_account_moneta\":false,\"is_premium\":false,\"cancelled\":false}"
+          "value": "{\"id\":91924,\"first_name\":null,\"last_name\":null,\"username\":\"Mahdeed110\",\"prev_username\":\"mahdeed0011\",\"identity\":\"Mahdeed110\",\"email\":\"mahdeed001@yopmail.com\",\"type\":1,\"muted\":false,\"banned\":false,\"active\":true,\"country\":{\"id\":208,\"code\":\"TW\",\"name\":\"Taiwan, China\"},\"language\":{},\"bio\":\"Hello\",\"profile_image\":\"https://s3.amazonaws.com/xiangqi-prod-media-xox8m5kg/medias/profile-images/L3WNx1.png?t=1758307219499\",\"locale\":\"en\",\"last_online\":\"2025-09-19 18:40:19.390159\",\"created_on\":\"2023-08-28 18:35:00.653564\",\"bullet_rating\":1523,\"rapid_rating\":863,\"daily_rating\":1523,\"linked_account_google\":false,\"linked_account_facebook\":false,\"linked_account_wechat\":false,\"linked_account_apple\":false,\"linked_account_moneta\":false,\"is_premium\":false,\"cancelled\":false}"
         },
         {
           "name": "xiuuid",
-          "value": "\"a8fe4e0c-7f3e-4275-9147-6408306604bd\""
+          "value": "\"6e6927ee-ff1a-43a6-aca5-a70b56a1c651\""
         },
         {
           "name": "xiangqi.theme.name",
@@ -222,8 +226,12 @@
           "value": "{\"stoppingIncorrectMoves\":[\"mistake\",\"blunder\"],\"stoppingOpponentMove\":false,\"showBestMove\":false}"
         },
         {
+          "name": "xianqgi.chatCount",
+          "value": "0"
+        },
+        {
           "name": "_gcl_ls",
-          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"creationTimeMs\":1758287545725},\"expires\":1766063545725}}"
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"creationTimeMs\":1758307217375},\"expires\":1766083217375}}"
         },
         {
           "name": "xiangqi.blockedUsers",
@@ -231,15 +239,15 @@
         },
         {
           "name": "ph_phc_VjXykO9FlfUeblQX0X25DdeeH0uc0zpk6r3gJ1EVLon_posthog",
-          "value": "{\"$initialization_time\":\"2025-09-19T13:12:24.877Z\",\"$configured_session_timeout_ms\":1800000,\"distinct_id\":\"Mahdeed110\",\"$device_id\":\"0199621a-c22e-7e5b-8942-9a37def25df2\",\"$user_state\":\"identified\",\"$session_recording_enabled_server_side\":false,\"$autocapture_disabled_server_side\":false,\"$heatmaps_enabled_server_side\":true,\"$web_vitals_enabled_server_side\":true,\"$web_vitals_allowed_metrics\":null,\"$exception_capture_enabled_server_side\":false,\"$error_tracking_suppression_rules\":[],\"$dead_clicks_enabled_server_side\":false,\"$active_feature_flags\":[],\"$enabled_feature_flags\":{},\"$feature_flag_payloads\":{},\"$feature_flag_details\":{},\"$feature_flag_request_id\":\"9a83ed84-74ec-4bcb-90ab-bff101ebd4c6\",\"$epp\":true,\"$user_id\":\"Mahdeed110\",\"$stored_person_properties\":{\"username\":\"Mahdeed110\",\"email\":\"mahdeed001@yopmail.com\",\"country\":\"Taiwan, China\",\"member_since\":\"28 August 2023\",\"linked_account_google\":false,\"linked_account_facebook\":false,\"account_type\":\"basic\",\"current_local_timezone\":\"Asia/Karachi\",\"unixTimestamp\":1758287547447}}"
-        },
-        {
-          "name": "xiangqi.pieceLocale",
-          "value": "\"zh\""
+          "value": "{\"$initialization_time\":\"2025-09-19T18:40:16.056Z\",\"$configured_session_timeout_ms\":1800000,\"distinct_id\":\"Mahdeed110\",\"$device_id\":\"01996346-eab8-722a-aa8c-18459cf52822\",\"$user_state\":\"identified\",\"$session_recording_enabled_server_side\":false,\"$autocapture_disabled_server_side\":false,\"$heatmaps_enabled_server_side\":true,\"$web_vitals_enabled_server_side\":true,\"$web_vitals_allowed_metrics\":null,\"$exception_capture_enabled_server_side\":false,\"$error_tracking_suppression_rules\":[],\"$dead_clicks_enabled_server_side\":false,\"$active_feature_flags\":[],\"$enabled_feature_flags\":{},\"$feature_flag_payloads\":{},\"$feature_flag_details\":{},\"$feature_flag_request_id\":\"3ddd711a-31ce-4de6-bb73-5827613f71c6\",\"$epp\":true,\"$user_id\":\"Mahdeed110\",\"$stored_person_properties\":{\"username\":\"Mahdeed110\",\"email\":\"mahdeed001@yopmail.com\",\"country\":\"Taiwan, China\",\"member_since\":\"28 August 2023\",\"linked_account_google\":false,\"linked_account_facebook\":false,\"account_type\":\"basic\",\"current_local_timezone\":\"Asia/Karachi\",\"unixTimestamp\":1758307219504}}"
         },
         {
           "name": "xiangqi.locale",
           "value": "\"en\""
+        },
+        {
+          "name": "xiangqi.pieceLocale",
+          "value": "\"zh\""
         },
         {
           "name": "xiangqi.mutedUsers",

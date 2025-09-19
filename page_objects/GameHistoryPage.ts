@@ -15,8 +15,8 @@ export class GameHistoryPage {
     backButton = () => this.page.locator('.back-button');
     loadMoreButton = () => this.page.getByRole('button', {name: 'Load More'});
     gamesTable = () => this.page.locator('.table-container');
-    gameCards = () => this.page.locator('a.tr >> :not(.accuracy-cell)');
-    gameReviewButton = () => this.page.locator('a.tr .accuracy-cell');
+    gameCards = () => this.page.locator('a.tr >> .player');
+    gameReviewButton = () => this.page.getByRole('img', { name: 'analysis-icon' });
     computerGamesTab = () => this.page.getByRole('button', {name: 'Computer Games'});
 
     async goToPlayPage(){
@@ -42,7 +42,10 @@ export class GameHistoryPage {
     }
 
     async clickAnyGameCard() {
-        await expect(this.gamesTable()).toBeVisible({timeout: 6000});
+        const response = await this.page.waitForResponse(response =>
+        response.url().includes('api.xiangqi.com/api/users/games/') && response.request().method() === 'GET'
+        );
+        await expect(response.status()).toBe(200);
         if (await this.loadMoreButton().isVisible()) {
             await this.loadMoreButton().click();
         }
@@ -50,8 +53,6 @@ export class GameHistoryPage {
         if (count > 0) {
             const randomIndex = Math.floor(Math.random() * count);
             const card = this.gameCards().nth(randomIndex);
-
-            const href = await card.getAttribute('href');
             await card.click();
             await this.page.waitForTimeout(3000) 
         } else {
@@ -60,8 +61,8 @@ export class GameHistoryPage {
         }   
 
     async checkNavigationToGame(){
-        await this.page.waitForTimeout(6000);
-        expect(this.page).toHaveURL(/\/game/);
+        await this.page.waitForURL(/\/game/);
+        await expect(this.page).toHaveURL(/\/game/);
     }
 
     async clickAnyGameReviewButton(){
@@ -77,13 +78,14 @@ export class GameHistoryPage {
             const href = await card.getAttribute('href');
             await card.click();
             await this.page.waitForTimeout(6000)
-        } else {
+        } 
+        else {
             throw new Error('No game links found');
             }   
     }
 
     async checkNavigationToGameReview(){
-        expect(this.page).toHaveURL(/\/review/);
+        await expect(this.page).toHaveURL(/\/review/);
     }
 
     async clickComputerGamesTab(){

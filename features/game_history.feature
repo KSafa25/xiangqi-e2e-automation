@@ -1,4 +1,5 @@
 # features/game_history.feature
+@prelogin @gameHistory
 Feature: User Game History
   As a user
   I want to sign in to my account
@@ -16,7 +17,6 @@ Scenario: A user can go back from game history page
     When I click on back button 
     Then I am returned to lobby 
 
-@gameHistory
 Scenario: A user can open any game from game history page
     Given I visit lobby as a signed in user
     When I click on game history tab

@@ -18,6 +18,8 @@ import { SignInPage } from '../page_objects/SignInPage';
 import { GameplayPage } from '../page_objects/GamePlayPage';
 import { ProfilePage } from '../page_objects/ProfilePage';
 import { SettingsPage } from '../page_objects/settingsPage';
+import { GameHistoryPage } from '../page_objects/GameHistoryPage';
+import { PuzzlePage } from '../page_objects/PuzzlePage';
 
 // Load environment variables
 dotenv.config();
@@ -62,6 +64,8 @@ export interface ICustomWorld extends World {
     GamePlayPage: GameplayPage;
     player1Page?: Page;
     player2Page?: Page;
+    gameHistoryPage: GameHistoryPage,
+    puzzlePage: PuzzlePage,
   };
   contexts?: {
     player1Context?: BrowserContext;
@@ -84,6 +88,8 @@ class CustomWorld extends World implements ICustomWorld {
     tempMailPage?: TempMailPage;
     player1Page?: Page;
     player2Page?: Page;
+    gameHistoryPage: GameHistoryPage,
+    puzzlePage: PuzzlePage,
   };
 
   constructor(options: IWorldOptions) {
@@ -112,6 +118,8 @@ Before(async function (this: ICustomWorld, scenario) {
     profilePage: new ProfilePage(this.page),
     settingsPage: new SettingsPage(this.page),
     GamePlayPage: new GameplayPage(this.page),
+    gameHistoryPage: new GameHistoryPage(this.page),
+    puzzlePage: new PuzzlePage(this.page),
   };
 });
 
