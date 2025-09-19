@@ -14,7 +14,8 @@ import * as fs from 'fs';
 
 // Import page objects
 import { XiangqiPage, TempMailPage } from '../page_objects/XiangqiPage';
-import { SignInPage } from '../page_objects/SignInPage';
+import { SignInPage } from '../page_objects/SignInPage'; // Adjust path if needed
+import { GameplayPage } from '../page_objects/GamePlayPage';
 import { ProfilePage } from '../page_objects/ProfilePage';
 import { SettingsPage } from '../page_objects/settingsPage';
 
@@ -70,6 +71,8 @@ AfterAll(async () => {
 });
 
 // Custom world interface
+
+// Define a custom world context. tempMailPage is optional because it's created dynamically.
 export interface ICustomWorld extends World {
   browser: Browser;
   context: BrowserContext;
@@ -80,7 +83,17 @@ export interface ICustomWorld extends World {
     profilePage: ProfilePage;
     settingsPage: SettingsPage;
     tempMailPage?: TempMailPage;
+    GamePlayPage: GameplayPage;
+    player1Page?: Page;
+    player2Page?: Page;
+    // Optional: will be created during the signup test run
   };
+  contexts?: {
+    player1Context?: BrowserContext;
+    player2Context?: BrowserContext;
+  };
+  gameplay1?: GameplayPage; 
+  gameplay2?: GameplayPage;
 }
 
 // Custom world implementation
@@ -93,7 +106,10 @@ class CustomWorld extends World implements ICustomWorld {
     signInPage: SignInPage;
     profilePage: ProfilePage;
     settingsPage: SettingsPage;
+    GamePlayPage: GameplayPage;
     tempMailPage?: TempMailPage;
+    player1Page?: Page;
+    player2Page?: Page;
   };
 
   constructor(options: IWorldOptions) {
@@ -120,15 +136,27 @@ Before(async function (this: ICustomWorld, scenario) {
   }
 
   this.page = await this.context.newPage();
-
+});
   // Initialize page objects
+// General Before hook: Runs for ALL scenarios.
+// It sets up a single page and the page objects that use it.
+Before(async function (this: ICustomWorld) {
+  this.browser = await chromium.launch({
+    headless: false,
+    slowMo: 1400, // Slows down Playwright operations by 500ms for observation
+  }); 
+  this.context = await this.browser.newContext();
+  const page = await this.context.newPage();
   this.pages = {
     xiangqiPage: new XiangqiPage(this.page),
     signInPage: new SignInPage(this.page),
     profilePage: new ProfilePage(this.page),
     settingsPage: new SettingsPage(this.page),
+    GamePlayPage: new GameplayPage(page),
   };
 });
+
+// NOTE: The tag-specific Before hook for @signup has been removed.
 
 // After each scenario
 After(async function (this: ICustomWorld) {
