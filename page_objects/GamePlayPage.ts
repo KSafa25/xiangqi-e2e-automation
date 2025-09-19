@@ -87,18 +87,27 @@ export class GameplayPage {
       this.playButton().click()
     ]);
     if (response.status() === 200) {
+      await this.page.waitForURL(/\/game/);
       return this.page.url();
     }
     if (response.status() === 400) {
       // clean up existing ongoing game
       await this.page.goto(`${BASE_URL}/play`, {timeout: 3000});
-      await this.ongoingGamesButton().click();
+      let [response] = await Promise.all([
+      this.page.waitForResponse(
+        res => res.url().includes('/api/v2/games/my-games'),
+        { timeout: 6000 }
+      ),
+      this.ongoingGamesButton().click()
+     ]);
+
       if (await this.playButton().isVisible()) {
         expect(this.playButton()).toBeVisible()
         await this.playButton().click();
       } else {
         await this.continueButton().click();
       }
+      await this.page.waitForTimeout(3000);
       if (await this.abandonBtn().isVisible()) {
         await this.abandonBtn().click();
         await this.yesBtn().click();
@@ -115,17 +124,18 @@ export class GameplayPage {
       [response] = await Promise.all([
         this.page.waitForResponse(
           res => res.url().includes('/api/v2/games/create-custom'),
-          { timeout: 6000 }
+          { timeout: 8000 }
         ),
         this.playButton().click()
       ]);
+      await this.page.waitForURL(/\/game/);
       return this.page.url();
     }
     throw new Error(`Unexpected status: ${response.status()}`);
   }
 
   async checkGamePage(){
-    await expect(this.page).toHaveURL(/\/game/);
+    await expect(this.page).toHaveURL(/\/game/, {timeout: 6000});
   }
 
   async joinGame(gameURL: string){

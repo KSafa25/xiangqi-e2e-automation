@@ -1,11 +1,12 @@
 # features/gameplay.feature
 
+ @gameplay @prelogin
+
 Feature: Multiplayer game
   As playerA and PlayerB
   We want to sign in to our accounts simultaneously 
   SO that we can play multiplayer game
 
-@gameplay
 Scenario: A player can checkmate the other 
     Given Both players are logged in
     When Both join game
@@ -13,14 +14,12 @@ Scenario: A player can checkmate the other
     And PlayerA checkmates PlayerB
     Then Checkmate modal should appear
 
-@gameplay
 Scenario: A game can be abandoned 
     Given Both players are logged in
     When Both join game
     And PlayerB abandons the game
     Then Abandon modal should appear
 
-@gameplay
 Scenario: A player can resign the game 
     Given Both players are logged in 
     When Both join game 
@@ -28,7 +27,6 @@ Scenario: A player can resign the game
     And PlayerA resigns the game 
     Then Resign modal should appear
 
-@gameplay
 Scenario: A player can accept an undo request
     Given Both players are logged in 
     When Both join game
