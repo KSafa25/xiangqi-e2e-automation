@@ -112,12 +112,38 @@ export class XiangqiPage {
   async completeProfile(username: string, password: string) {
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);
-    
-    await this.countryDropdown.click();
-    await this.page.getByText('China', { exact: true }).click();
 
-    await this.skillLevelDropdown.click();
-    await this.page.getByText('Beginner').click();
+    // Check and change Country
+    
+    // await this.countryDropdown.click();
+    // await this.page.getByText('China', { exact: true }).click();
+
+    // await this.skillLevelDropdown.click();
+    // await this.page.getByText('Beginner').click();
+
+// Check and change Country
+const currentCountry = await this.page.locator('.react-select__single-value').first().textContent();
+
+if (currentCountry?.includes('Pakistan')) {
+  await this.page.locator('.react-select__input-container').first().click();
+  await this.page.locator('#react-select-2-input').fill('china');
+  await this.page.getByRole('option', { name: 'country China' }).locator('div').click();
+}
+
+// Check and change Skill Level
+const currentSkill = await this.page.locator('.react-select__single-value').nth(1).textContent();
+
+if (currentSkill?.includes('Xiangqi Newbie')) {
+  await this.page.locator('div').filter({ hasText: /^Xiangqi Newbie$/ }).nth(2).click();
+  await this.page.getByRole('option', { name: 'Beginner Beginner' }).locator('div').click();
+}
+
+    
+    // await this.countryDropdown.click();
+    // await this.page.getByText('China', { exact: true }).click();
+
+    // await this.skillLevelDropdown.click();
+    // await this.page.getByText('Beginner').click();
 
     await this.profileSubmitButton.click();
     await this.page.waitForTimeout(3000);
