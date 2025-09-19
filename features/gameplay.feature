@@ -1,11 +1,12 @@
 # features/gameplay.feature
- @prelogin
+
+ @gameplay @prelogin
+
 Feature: Multiplayer game
   As playerA and PlayerB
   We want to sign in to our accounts simultaneously 
   SO that we can play multiplayer game
 
-@gameplay
 Scenario: A player can checkmate the other 
     Given Both players are logged in
     When Both join game

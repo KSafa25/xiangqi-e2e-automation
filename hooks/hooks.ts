@@ -105,7 +105,6 @@ Before(async function (this: ICustomWorld, scenario) {
     this.context = await this.browser.newContext();
     console.log(`Scenario "${scenario.pickle.name}" starting fresh.`);
   }
-
   this.page = await this.context.newPage();
   this.pages = {
     xiangqiPage: new XiangqiPage(this.page),
